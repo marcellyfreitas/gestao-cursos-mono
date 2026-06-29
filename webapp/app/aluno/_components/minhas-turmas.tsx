@@ -200,7 +200,7 @@ export function MinhasTurmas() {
 			{Array.from({ length: 2 }).map((_, i) => (
 				<div key={i} className="flex flex-col gap-3">
 					<Skeleton className="h-5 w-40" />
-					<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+					<div className="grid grid-cols-1 gap-4">
 						{Array.from({ length: 2 }).map((_, j) => (
 							<div key={j} className="rounded-xl border p-5 flex flex-col gap-4">
 								<Skeleton className="h-4 w-48" />
@@ -233,7 +233,7 @@ export function MinhasTurmas() {
 							{turmasDoCurso.length} {turmasDoCurso.length === 1 ? 'turma' : 'turmas'}
 						</span>
 					</div>
-					<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+					<div className="grid grid-cols-1 gap-4">
 						{turmasDoCurso.map(t => <CardTurma key={t.matriculaId} turma={t} />)}
 					</div>
 				</div>
