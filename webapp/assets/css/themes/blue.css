@@ -1,0 +1,13 @@
+@layer base {
+	:root {
+		--primary-blue: var(--color-blue-400);
+	}
+
+	.theme-blue {
+		--primary: var(--primary-blue);
+	}
+
+	.dark.theme-blue {
+		--primary: var(--primary-blue);
+	}
+}

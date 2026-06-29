@@ -1,0 +1,19 @@
+@layer base {
+	:root {
+		--primary-red: var(--color-red-400);
+	}
+
+	.theme-red {
+		--primary: var(--primary-red);
+		--primary-foreground: oklch(0.98 0 0);
+		--secondary: oklch(0.95 0.01 250);
+		--secondary-foreground: oklch(0.22 0.03 275);
+	}
+
+	.dark.theme-red {
+		--primary: var(--primary-red);
+		--primary-foreground: oklch(0.22 0.03 275);
+		--secondary: oklch(0.3 0.03 260);
+		--secondary-foreground: oklch(0.98 0 0);
+	}
+}

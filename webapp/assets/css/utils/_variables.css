@@ -1,0 +1,8 @@
+:root {
+	--primary: #4C0080;
+	--primary-foreground: oklch(0.98 0 0);
+	--secondary: oklch(0.95 0.01 250);
+	--secondary-foreground: oklch(0.22 0.03 275);
+	--home-navbar-header-height: 75px;
+	--text-muted-default: #4D4353;
+}
