@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Build output
+.next/
+out/
+build/
+dist/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env.local
+.env.*.local
+
+# Secrets (não commitar!)
+.env
+*.pem
+*.key
+
+# Backup
+*.dump
+*.bak
+
+# Docker
+docker/.env
+docker/.env.production
+docker/nginx.conf
+docker/ssl/
+docker/backups/
+docker-compose.override.yml
+
+# Agent/skills
+.agents/
+AGENTS.md
+skills-lock.json
