@@ -1,0 +1,38 @@
+# Local/Dev — portas expostas, Swagger habilitado, sem SSL, sem limites rígidos
+
+services:
+  mysql:
+    ports:
+      - "3306:3306"
+
+  api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+:5070
+    ports:
+      - "5070:5070"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:5070/swagger/index.html || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  webapp:
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000 > /dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  nginx:
+    ports:
+      - "80:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1 > /dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

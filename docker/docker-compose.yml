@@ -1,0 +1,71 @@
+# Base — serviços comuns a todos os ambientes
+# Usar com: docker compose -f docker-compose.yml -f docker-compose.<env>.yml
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: sgc-mysql
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - sgc-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
+  api:
+    build:
+      context: ../webapi
+      dockerfile: Dockerfile
+    container_name: sgc-api
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      - ASPNETCORE_URLS=http://+:5070
+    networks:
+      - sgc-network
+
+  webapp:
+    build:
+      context: ../webapp
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+    container_name: sgc-webapp
+    restart: unless-stopped
+    depends_on:
+      - api
+    env_file: .env
+    environment:
+      - API_URL=http://sgc-api:5070/api/v1
+    networks:
+      - sgc-network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: sgc-nginx
+    restart: unless-stopped
+    depends_on:
+      - webapp
+      - api
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - sgc-network
+
+volumes:
+  mysql_data:
+
+networks:
+  sgc-network:
+    driver: bridge
