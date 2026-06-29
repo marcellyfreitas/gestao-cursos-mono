@@ -22,7 +22,7 @@ public class UsuarioSeeder : ISeeder
 
         _context.Usuarios.Add(new Usuario
         {
-            Email = "fernando-moura@live.com",
+            Email = "admin@email.com",
             Nome = "Administrador",
             Senha = PasswordHelper.HashPassword("admin123"),
             Role = UserRole.ADMIN,

@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import ImageLogo from '@/assets/images/ibca_logo_square.png';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -12,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/co
 import { Switch } from '@/components/ui/switch';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
+  Cross,
   Users,
   BookOpen,
   Mail,
@@ -54,14 +53,8 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-3">
-          <Image
-            src={ImageLogo}
-            alt="Logo IBCA"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
-          />
-          <span className="font-bold text-xl">Escolas IBCA</span>
+          <Cross className="h-8 w-8 text-primary" />
+          <span className="font-bold text-xl">Escola Ministerial</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -409,17 +402,11 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
-            <Image
-              src={ImageLogo}
-              alt="Logo IBCA"
-              width={32}
-              height={32}
-              className="h-8 w-auto"
-            />
-            <span className="font-semibold">Escolas IBCA</span>
+            <Cross className="h-6 w-6 text-primary" />
+            <span className="font-semibold">Escola Ministerial</span>
           </div>
           <p className="text-sm text-muted-foreground text-center">
-            © 2026 Escolas IBCA. Todos os direitos reservados.
+            © 2026 Escola Ministerial. Todos os direitos reservados.
           </p>
           <div className="flex items-center space-x-4">
             <Link

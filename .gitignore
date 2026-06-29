@@ -8,6 +8,11 @@ out/
 build/
 dist/
 
+webapi/obj
+webapi/bin
+webapi.Tests/obj
+webapi.Tests/bin
+
 # IDE
 .idea/
 

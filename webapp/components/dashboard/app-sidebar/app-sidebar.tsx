@@ -32,7 +32,7 @@ export function AppSidebar({ ...props }: AppSidebarProps) {
 						>
 							<a href="#">
 								<BookOpen className="size-5! text-primary" />
-								<span className="text-base font-extrabold text-primary">ESCOLAS IBCA</span>
+								<span className="text-base font-extrabold text-primary">ESCOLA MINISTERIAL</span>
 							</a>
 						</SidebarMenuButton>
 					</SidebarMenuItem>

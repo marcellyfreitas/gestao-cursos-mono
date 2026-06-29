@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
-import ImageLogo from '@/assets/images/ibca_logo_square.png';
+import { Cross } from 'lucide-react';
 import { RegisterForm } from '@/components/auth/register-form';
 
 export default function RegisterPage() {
@@ -8,8 +8,8 @@ export default function RegisterPage() {
 		<div className="w-full max-w-full min-h-screen flex items-center justify-center px-4 py-8">
 			<div className="flex flex-col gap-4">
 				<div className="flex flex-col items-center justify-center gap-4">
-					<img className="w-15 h-15" src={ImageLogo.src} alt="Logo IBCA" />
-					<h1 className="font-extrabold text-primary text-3xl">Escolas IBCA</h1>
+					<Cross className="w-15 h-15 text-primary" />
+					<h1 className="font-extrabold text-primary text-3xl">Escola Ministerial</h1>
 					<h2 className="text-(--text-muted-default)">Estamos felizes que você iniciará essa jornada de crescimento em Jesus!</h2>
 				</div>
 

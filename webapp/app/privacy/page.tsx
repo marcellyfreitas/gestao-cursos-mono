@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-3">1. Informações Gerais</h2>
             <p>
-              A Escolas IBCA respeita sua privacidade e está comprometida com a proteção
+              A Escola Ministerial respeita sua privacidade e está comprometida com a proteção
               dos dados pessoais de nossos usuários. Esta política descreve como coletamos,
               usamos e protegemos suas informações.
             </p>

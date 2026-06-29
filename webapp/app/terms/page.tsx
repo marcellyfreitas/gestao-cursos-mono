@@ -19,7 +19,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-3">1. Aceitação dos Termos</h2>
             <p>
-              Ao acessar e utilizar a plataforma Escolas IBCA, você concorda com estes Termos de Uso.
+              Ao acessar e utilizar a plataforma Escola Ministerial, você concorda com estes Termos de Uso.
               Caso não concorde com qualquer parte destes termos, pedimos que não utilize nossos serviços.
             </p>
           </section>
@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-3">2. Uso da Plataforma</h2>
             <p>
-              A plataforma Escolas IBCA destina-se exclusivamente para fins de gestão de cursos internos
+              A plataforma Escola Ministerial destina-se exclusivamente para fins de gestão de cursos internos
               da igreja. O usuário compromete-se a utilizar o sistema de forma ética e responsável,
               respeitando as normas da instituição.
             </p>
@@ -55,14 +55,14 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-foreground mb-3">5. Propriedade Intelectual</h2>
             <p>
               Todo o conteúdo disponibilizado na plataforma, incluindo materiais de curso,
-              textos, imagens e logos, são propriedade da IBCA e protegidos por direitos autorais.
+              textos, imagens e logos, são propriedade da igreja e protegidos por direitos autorais.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-3">6. Limitação de Responsabilidade</h2>
             <p>
-              A Escolas IBCA não se responsabiliza por interrupções temporárias no serviço
+              A Escola Ministerial não se responsabiliza por interrupções temporárias no serviço
               decorrentes de manutenção ou falhas técnicas, empenhando-se para manter a
               plataforma sempre disponível.
             </p>

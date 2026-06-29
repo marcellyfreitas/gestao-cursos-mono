@@ -52,7 +52,7 @@ public class EmailService : IEmailService
         var link = $"{_frontendUrl}/authentication/validar-email?token={token}&email={to}";
         var body = $@"
             <h2>Olá, {nome}!</h2>
-            <p>Bem-vindo às Escolas IBCA!</p>
+            <p>Bem-vindo à Escola Ministerial!</p>
             <p>Para validar seu email, clique no botão abaixo:</p>
             <p>
                 <a href='{link}' style='background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;'>Validar Email</a>
@@ -60,10 +60,10 @@ public class EmailService : IEmailService
             <p>Ou copie e cole o seguinte link no seu navegador:</p>
             <p><a href='{link}'>{link}</a></p>
             <p>Este link expira em 24 horas.</p>
-            <p>Atenciosamente,<br>Escolas IBCA</p>
+            <p>Atenciosamente,<br>Escola Ministerial</p>
         ";
 
-        return await SendEmailAsync(to, "Validação de Email - Escolas IBCA", body);
+        return await SendEmailAsync(to, "Validação de Email - Escola Ministerial", body);
     }
 
     public async Task<bool> SendPasswordRecoveryAsync(string to, string nome, string token)
@@ -80,9 +80,9 @@ public class EmailService : IEmailService
             <p><a href='{link}'>{link}</a></p>
             <p>Este link expira em 1 hora.</p>
             <p>Se você não solicitou esta recuperação, por favor ignore este email.</p>
-            <p>Atenciosamente,<br>Escolas IBCA</p>
+            <p>Atenciosamente,<br>Escola Ministerial</p>
         ";
 
-        return await SendEmailAsync(to, "Recuperação de Senha - Escolas IBCA", body);
+        return await SendEmailAsync(to, "Recuperação de Senha - Escola Ministerial", body);
     }
 }
