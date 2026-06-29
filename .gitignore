@@ -43,4 +43,5 @@ docker-compose.override.yml
 # Agent/skills
 .agents/
 AGENTS.md
-skills-lock.json
+skills-lock.jsonbin/
+obj/
